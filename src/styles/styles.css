@@ -1,0 +1,327 @@
+@import "~normalize.css";
+@import "roboto.css";
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding-top: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.myImg {
+    background: url("../assets/eb60bc8a48a3e05188bae3af_rw_1920.jpg");
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* Checkbox */
+
+.checkbox {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fancy {
+    position: relative;
+    width: 1.1em;
+    height: 1.1em;
+    margin: 0 0.3em 0 0;
+    border: 2px solid #494949;
+    border-radius: 0.3em;
+}
+
+.fancy:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
+    transform: scale(0);
+    transition: transform 0.3s 0s;
+}
+
+.checkbox input {
+    position: absolute;
+    appearance: none;
+}
+
+.label:hover .fancy {
+    background: #35E07D;
+}
+
+.label input:focus + .fancy {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+}
+
+.label input:checked + .fancy:before {
+    transform: scale(1);
+}
+
+.label input:checked + .fancy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #27AE60;
+}
+
+.myCheckbox label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.myCheckbox input {
+    appearance: none;
+}
+
+.custom {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.4em 0 0;
+    border: 2px solid #333;
+    border-radius: 6px;
+}
+
+.custom::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.myCheckbox label:hover .custom {
+    background: tomato;
+}
+
+.myCheckbox input:checked + .custom::before {
+    transform: scale(1);
+}
+
+.myCheckbox input:checked + .custom {
+    background: rgb(179, 69, 50);
+}
+
+.cheboxMy {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+.cheboxMy label {
+    display: flex;
+    align-items: center;
+}
+
+.cheboxMy input {
+    position: absolute;
+    appearance: none;
+}
+
+.fancyCheckbox {
+    position: relative;
+    margin: 0 0.4em 0 0;
+    width: 1em;
+    height: 1em;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.fancyCheckbox:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    clip-path: polygon(45% 64%, 84% 14%, 100% 28%, 47% 100%, 0 49%, 15% 32%);
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.cheboxMy:hover .fancyCheckbox {
+    background: rgb(253, 216, 92);
+}
+
+.cheboxMy input:checked + .fancyCheckbox {
+    background: rgb(180, 154, 66);
+}
+
+.cheboxMy input:checked + .fancyCheckbox:before {
+    transform: scale(1);
+}
+
+.cheboxMy input:focus + .fancyCheckbox {
+    box-shadow: 0 0 10px #333;
+}
+
+.weakCustomSelect {
+    position: relative;
+    width: fit-content;
+    margin: 2rem 0;
+}
+
+.weakCustomSelect select {
+    padding: 0.8em 4em 0.8em 1.5em;
+    background: #4b5061;
+    font-size: 1.2rem;
+    color: #fff;
+    border: 0;
+    border-radius: 0.5em;
+}
+
+.weakCustomSelect select:focus-visible {
+    outline: none;
+}
+
+.weakCustomArrow {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 100%;
+    background: #40474a;
+    border-radius: 0 0.5em 0.5em 0;
+    pointer-events: none;
+}
+
+.weakCustomArrow:before,
+.weakCustomArrow:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+}
+
+.weakCustomArrow:before {
+    top: 30%;
+    border-left: 0.65em solid transparent;
+    border-right: 0.65em solid transparent;
+    border-bottom: 0.65em solid rgba(255, 255, 255, 0.5);
+}
+
+.weakCustomArrow:after {
+    top: 65%;
+    border-left: 0.65em solid transparent;
+    border-right: 0.65em solid transparent;
+    border-top: 0.65em solid rgba(255, 255, 255, 0.5);
+}
+
+
+
+.fullCustomSelect {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.selectBox {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+}
+
+.selectBox label {
+    cursor: pointer;
+}
+
+.optionContainer {
+    order: 1;
+    width: 100%;
+    max-height: 0;
+    background: #2f3640;
+    color: #f5f6fa;
+    opacity: 0;
+    border-radius: 0.5rem;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+
+.optionContainer::-webkit-scrollbar {
+    width: 7px;
+    background: #0d141f;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.optionContainer::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0.5rem;
+}
+
+.active {
+    max-height: 11rem;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.option,
+.selected {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+}
+
+.selected {
+    position: relative;
+    order: 0;
+    margin-bottom: 0.5rem;
+    background: #2f3640;
+    border-radius: 0.5rem;
+    color: #f5f6fa;
+}
+
+.selected::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 4%;
+    border-top: 0.5rem solid #f5f6fa;
+    border-right: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+    transform: translate(0, -50%);
+    transition: all 0.4s;
+}
+
+.active + .selected::after {
+    /* position: absolute;
+    content: '';
+    top: 50%;
+    right: 4%; */
+    border-top: none;
+    border-right: 0.4rem solid transparent;
+    border-bottom: 0.5rem solid #f5f6fa;
+    border-left: 0.4rem solid transparent;
+    /* transform: translate(0, -50%);
+    transition: all 0.4s; */
+}
+
+.option:hover {
+    background: #414b57;
+}
+
+.radio {
+    appearance: none;
+    position: absolute;
+}

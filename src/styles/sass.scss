@@ -1,0 +1,13 @@
+$superColor: red;
+$text: #333333;
+
+.box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid $superColor;
+
+    h2 {
+        text-align: center;
+        color: $text;
+    }
+}
